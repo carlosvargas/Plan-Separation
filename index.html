@@ -1,13 +1,186 @@
 <html>
-<head>
-  <title>Plan Separation, LET'S GO!</title>
-  <meta property="og:title" content="Plan Separation"/>
-  <meta property="og:description" content="Where we make Plan Separation happen. LET'S GO!"/>
-  <meta property=”og:image" content="ts.jpg"/>
-  <meta name="twitter:label1" value="Made with Love" />
-  <meta name="twitter:data1" value="By GTM VO/S&R/Please don't change our name again." />
-</head>
-<body style="width: 500;margin: 50px auto;">
-	<img src="./ts.jpg" />
-</body>
+  <head>
+    <title>Plan Separation, LET'S GO!</title>
+    <meta property="og:title" content="Plan Separation" />
+    <meta
+      property="og:description"
+      content="Where Taylor makes Plan Separation happen. LET'S GO!"
+    />
+    <meta property=”og:image" content="ts.jpg"/>
+    <meta name="twitter:label1" value="Author" />
+    <meta
+      name="twitter:data1"
+      value="By GTM VO/S&R/Please don't change our name again."
+    />
+    <style>
+      body {
+        background: #dcd6c8;
+        color: #424242;
+        width: 550;
+        margin: 20px auto;
+      }
+
+      button {
+        background: #5d5d5e;
+        color: #dcd6c8 !important;
+        font-size: 20px;
+        padding: 20px;
+        border: 1px solid #dcd6c8;
+        cursor: pointer;
+        width: 250px;
+        margin-top: 50px;
+      }
+
+      button:hover,
+      button:active {
+        background: #000 !important;
+      }
+
+      img {
+        width: 550px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      @media screen and (max-width: 500px) {
+        img {
+          width: 100vw;
+        }
+      }
+
+      #load-taylor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .typewriter {
+        white-space: nowrap;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 10px auto; /* Gives that scrolling effect as the typing happens */
+        animation: typing 3.5s steps(40, end),
+          blink-caret 0.75s step-end infinite;
+      }
+
+      .show {
+        border-right: none;
+        display: block;
+      }
+
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: orange;
+        }
+      }
+      @keyframes hide-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="load-taylor">
+      <img src="./ts.jpg" />
+
+      <button class="contact-taylor" onclick="startTyping()">
+        Contact Taylor 💌
+      </button>
+    </div>
+
+    <div class="hide">
+      <h1>Plan Separation, by Taylor Swift AI</h1>
+      <p>
+        <i>(Verse 1)</i>
+        <br />Remember nights in our apartment, whispers filled with doubt?
+        <br />
+        Two ships in the same storm, dreams crashing and wearing out <br />
+        <b>"Plan Separation"</b>, we wrote it on the bathroom tile <br />
+        A map to escape the spotlight, reclaim a love gone stale
+      </p>
+
+      <p>
+        <i>(Chorus)</i> <br />
+        <b>Brand separation</b>, a masterpiece of pain <br />
+        Our fractured hearts on billboards, washed away by rain<br />
+        We soared as solo comets, burning bright and brief <br />
+        But in the lonely orbit, something yearned, a desperate relief
+      </p>
+
+      <p>
+        <i>(Verse 2)</i> <br />
+        Awards shows blurred, a sea of smiles, with cheers and borrowed miles
+        <br />
+        Your face in every magazine, a ghost haunting this gilded scene <br />
+        <b>Plan Separation</b>, a perfect play, the critics raved, the fans all
+        swayed
+      </p>
+
+      <p>
+        <i>(Chorus)</i> <br />
+        <b>Brand separation</b>, a masterpiece of pain <br />Our fractured
+        hearts on billboards, washed away by rain <br />
+        We soared as solo comets, burning bright and brief <br />
+        But in the lonely orbit, something yearned, a desperate relief <br />
+        So let's rewrite the ending, tear down the walls we built <br />
+        Rekindle the embers, let love's flame once again be spilt
+      </p>
+
+      <p>
+        <i>(Outro)</i> <br />
+        <b>Brand separation</b>, a chapter closed, a love story that time
+        exposed <br />We found our way back to each other, whispers in the
+        summer clover
+        <br />
+        Just hand in hand, hearts entwined, a love that brightly gleams <br />
+        <b>Brand separation</b>, a memory's ghost, we're stronger now, the love
+        we boast <br />
+        So let's go write a sequel, one where true love always steals the
+        show,<br />
+        oh yeah <b>"Plan Separation", LET'S GO!</b>
+      </p>
+    </div>
+  </body>
+
+  <script>
+    function startTyping() {
+      document.querySelector("#load-taylor").style.display = "none";
+
+      document.querySelector(".hide").setAttribute("class", "");
+
+      document
+        .querySelectorAll("h1, p")
+        .forEach((e) => e.setAttribute("class", "typewriter"));
+
+      const animated = document.querySelector(".typewriter");
+
+      animated.addEventListener("animationend", () => {
+        document
+          .querySelectorAll(".typewriter")
+          .forEach((e) => e.setAttribute("class", "show"));
+      });
+    }
+  </script>
 </html>
